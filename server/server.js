@@ -8,6 +8,8 @@ const contactRoute = require("./router/contact-router");
 const serviceRoute = require("./router/service-router");
 const errorMiddleware = require("./middlewares/error-middleware");
 
+// const { PythonShell } = require('python-shell');
+
 // include before data getting/ handling cors policy error
 const corsOptions = {
     origin:"http://localhost:5173",
@@ -25,6 +27,20 @@ app.use("/api/form", contactRoute);
 app.use("/api/data", serviceRoute);
 
 app.use(errorMiddleware);
+
+// app.get('/api/model', (req, res) => {
+//     PythonShell.run('load_model.py', {
+//         args: ['./careerlast.pkl'],
+//         pythonOptions: ['-u'], // get print results in real-time
+//         scriptPath: '/load_model.py',
+//         pythonPath: 'C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\sklearn\__init__.py'
+//     }, function (err, results) {
+//         if (err) throw err;
+//         console.log('results:', results);
+//     });
+
+// });
+
 
 const PORT = 5000;
 

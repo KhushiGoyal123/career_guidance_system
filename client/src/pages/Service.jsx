@@ -1,39 +1,72 @@
 import { useAuth } from "../store/auth"
 
 export const Service = () => {
-    const {services} = useAuth();
+    const { services } = useAuth();
 
     return (
-        <section className="section-services">
-            <div className="container">
-                <h1 className="main-heading">Services</h1>
-            </div>
-
-            <div className="container grid grid-three-cols">
-
-            {
-                services.map((curElem,index) =>{
-                    const {title,description,url,img_url} = curElem;
-
-                return(
-                
-                <div className="card" key={index}>
-                    <div className="card-img">
-                            <img src="./images/register.png" alt="our service image" height="300" width="300"/>
-                    </div>
-
-                    <div className="card-details">
-                        <div className="grid grid-two-cols">
-                            <p>{url}</p>
-                            {/* <p>{price}</p> */}
+        <main>
+            <section className="portfolio-section">
+                <div className="grid grid-three-cols">
+                    <div className="service-card-container">
+                        <div className="service-card">
+                            <div className="service-card-front service-card-face">
+                                <h1 className="degree-heading">Bachelor of Technology (B.Tech)</h1>
+                            </div>
+                            <div className="service-card-back service-card-face">
+                                <div className="back-btn">
+                                    <button className="service-btn"><a href="../images/Roadmaps/CSE.png">Computer Science</a></button>
+                                    <button className="service-btn"><a href="../images/Roadmaps/CSE.png">Information Technology</a></button>
+                                    <button className="service-btn"><a href="../images/Roadmaps/CSE.png">Electrical</a></button>
+                                    <button className="service-btn"><a href="../images/Roadmaps/CSE.png">Electronics & Communication</a></button>
+                                    <button className="service-btn"><a href="../images/Roadmaps/CSE.png">Mechanical</a></button>
+                                    <button className="service-btn"><a href="../images/Roadmaps/CSE.png">Civil</a></button>
+                                    
+                                </div>
+                            </div>
                         </div>
-                        <h2>{title}</h2>
-                        <p>{description}</p>
+                    </div>
+                    <div className="service-card-container">
+                        <div className="service-card">
+                            <div className="service-card-front service-card-face">
+                                <h1 className="degree-heading">Master of Technology (M.Tech)</h1>
+                            </div>
+                            <div className="service-card-back service-card-face">CSE</div>
+                        </div>
+                    </div>
+                    <div className="service-card-container">
+                        <div className="service-card">
+                            <div className="service-card-front service-card-face">
+                                <h1 className="degree-heading">Bachelor in Computer Applications (BCA)</h1>
+                            </div>
+                            <div className="service-card-back service-card-face">CSE</div>
+                        </div>
+                    </div>
+                    <div className="service-card-container">
+                        <div className="service-card">
+                            <div className="service-card-front service-card-face">
+                                <h1 className="degree-heading">Bachelor in Computer Applications (BCA)</h1>
+                            </div>
+                            <div className="service-card-back service-card-face">CSE</div>
+                        </div>
+                    </div>
+                    <div className="service-card-container">
+                        <div className="service-card">
+                            <div className="service-card-front service-card-face">
+                                <h1 className="degree-heading">Bachelor in Computer Applications (BCA)</h1>
+                            </div>
+                            <div className="service-card-back service-card-face">CSE</div>
+                        </div>
+                    </div>
+                    <div className="service-card-container">
+                        <div className="service-card">
+                            <div className="service-card-front service-card-face">
+                                <h1 className="degree-heading">Bachelor in Computer Applications (BCA)</h1>
+                            </div>
+                            <div className="service-card-back service-card-face">CSE</div>
+                        </div>
                     </div>
                 </div>
-                );
-                })}
-            </div>
-        </section>
+            </section>
+        </main>
     )
 }

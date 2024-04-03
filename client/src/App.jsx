@@ -8,6 +8,8 @@ import { Login } from "./pages/Login";
 import { Navbar } from "./components/Navbar";
 import { Error } from "./pages/Error";
 import { Logout } from "./pages/Logout";
+import { Blog } from "./pages/Blog";
+// import ModelPage from "./components/ModelPage";
 
 const App = ()=>{
   return (
@@ -18,8 +20,11 @@ const App = ()=>{
           <Route path="/" element= {<Home />}/>
           <Route path="/about" element= {<About />}/>
           <Route path="/contact" element= {<Contact />}/>
+          <Route path="/blog" element={<Blog />} />
           <Route path="/service" element= {<Service />}/>
           <Route path="/register" element= {<Register />}/>
+          {/* <Route path="/model" component={ModelPage} /> */}
+          {/* <Route path="/model" element={<ModelPage />} /> */}
           <Route path="/login" element= {<Login />}/>
           <Route path="/logout" element= {<Logout />} />
           <Route path="*" element= {<Error/>}/>

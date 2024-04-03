@@ -1,7 +1,9 @@
 import { Analytics } from "../components/Analytics"
 import {NavLink} from "react-router-dom"
+import { useAuth } from "../store/auth";
 
 export const Home = () => {
+    const { user } = useAuth();
     return <>
 
         <section>
@@ -9,11 +11,11 @@ export const Home = () => {
                 <section className="home-section">
                     <div className="container grid grid-two-cols">
                         <div className="home-content">
-                            <p>Hii, User!!</p>
+                            <p>Hii, {user ? user.username : "User"} 🤗</p>
                             <h2>Welcome to CareerGuru </h2>
                             <p>Unlock Your Potential, Navigate Your Career Journey. 
                                 Discover the Path to Success with Our Expert Career Guidance.</p>
-                            <button className="common-btn home-btn">Explore More!</button>
+                            <a href="/service"><button className="common-btn home-btn">Explore More!</button></a>
                             <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'></link>
 
                             <div className="social-icons">

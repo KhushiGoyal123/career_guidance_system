@@ -21,10 +21,10 @@ export const Navbar = () => {
                 <NavLink to="/about" className="hover-animation"> About </NavLink>
               </li>
               <li>
-                <NavLink to="/service" className="hover-animation"> Services </NavLink>
+                <NavLink to="/blog" className="hover-animation"> Blogs </NavLink>
               </li>
               <li>
-                <NavLink to="/blog" className="hover-animation"> Blog </NavLink>
+                <NavLink to="/service" className="hover-animation"> Roadmaps </NavLink>
               </li>
               <li>
                 <NavLink to="/contact" className="hover-animation"> Contact </NavLink>

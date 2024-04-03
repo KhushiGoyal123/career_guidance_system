@@ -10,9 +10,9 @@ export const About = () => {
     <>
       <section>
         <main>
-          <div className="section-hero about-section">
+          <div className="section-hero home-section">
             <div className="container grid grid-two-cols">
-              <div className="hero-content">
+              <div className="home-content">
 
                 <p>Welcome,{user ? user.username : "User"}</p>
                 <h1>Why choose us?</h1>
@@ -27,7 +27,7 @@ export const About = () => {
                   <NavLink to="/">
                     <button className="common-btn">Counselling</button>
                   </NavLink>
-                  <NavLink to="/">
+                  <NavLink to="/service">
                     <button className="common-btn">Roadmaps</button>
                   </NavLink>
                 </div>
